@@ -13,7 +13,7 @@ public class Department implements Serializable
 	public Department() 
 	{
 		
-	};
+	}
 
 	public Department(Integer id, String name) 
 	{
@@ -47,6 +47,7 @@ public class Department implements Serializable
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		
 		return result;
 	}
 
@@ -64,8 +65,10 @@ public class Department implements Serializable
 		{
 			if (other.id != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} 
+		else if (!id.equals(other.id))
 			return false;
+		
 		return true;
 	}
 

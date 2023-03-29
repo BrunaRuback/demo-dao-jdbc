@@ -29,6 +29,7 @@ public class DB
 				throw new DbException(e.getMessage());
 			}
 		}
+		
 		return conn;
 	}
 	
@@ -39,7 +40,8 @@ public class DB
 			try 
 			{
 				conn.close();
-			} catch (SQLException e) 
+			} 
+			catch (SQLException e) 
 			{
 				throw new DbException(e.getMessage());
 			}
@@ -52,6 +54,7 @@ public class DB
 		{
 			Properties props = new Properties();
 			props.load(fs);
+			
 			return props;
 		}
 		catch (IOException e) 
@@ -67,7 +70,8 @@ public class DB
 			try 
 			{
 				st.close();
-			} catch (SQLException e) 
+			} 
+			catch (SQLException e) 
 			{
 				throw new DbException(e.getMessage());
 			}
@@ -81,7 +85,8 @@ public class DB
 			try 
 			{
 				rs.close();
-			} catch (SQLException e) 
+			} 
+			catch (SQLException e) 
 			{
 				throw new DbException(e.getMessage());
 			}
